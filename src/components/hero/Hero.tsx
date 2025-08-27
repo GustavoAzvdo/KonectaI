@@ -111,18 +111,18 @@ const Hero = () => {
                             Somos uma empresa que resolve problemas comunitários através de tecnologia, inovação e impacto social real.
                         </Typography>
                     </Container>
-                    <Stack spacing={3} direction={'row'} sx={{ mt: 5, zIndex: 10 }}>
+                    <Stack spacing={3} direction={'row'} sx={{ mt: 5, zIndex: 10, px: 1 }}>
 
                         <Button
                             variant="outlined"
                             size="large"
                             sx={{
-                                fontSize: { xs: 15, sm: 16, md: 18 }, // xs = celular, sm = tablet, md = desktop
+                                fontSize: { xs: 14, sm: 16, md: 18 }, // xs = celular, sm = tablet, md = desktop
                                 bgcolor: '#ffffff10',
                                 color: 'background.paper',
                                 borderColor: 'background.paper',
                                 '&:hover': { color: 'primary.main', bgcolor: 'background.paper' },
-                                px: { xs: 2, sm: 3, md: 4 }, // padding horizontal
+                                px: { xs: 1, sm: 3, md: 4 }, // padding horizontal
                                 py: { xs: 1, sm: 1.5, md: 2 }, // padding vertical
                             }}
                         >
@@ -132,7 +132,7 @@ const Hero = () => {
                             variant="contained"
                             size="large"
                             sx={{
-                                fontSize: { xs: 15, sm: 16, md: 18 }, // ajusta o tamanho da fonte conforme a tela
+                                fontSize: { xs: 14, sm: 16, md: 18 }, // ajusta o tamanho da fonte conforme a tela
                                 bgcolor: 'background.paper',
                                 color: 'primary.main',
                                 px: { xs: 2, sm: 3, md: 4 }, // padding horizontal responsivo
