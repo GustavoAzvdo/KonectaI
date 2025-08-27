@@ -101,20 +101,7 @@ export default function Footer() {
                             >
                                 Projetos
                             </Typography>
-                            <Typography
-                                component={Link}
-                                href="#"
-                                sx={{ color: "background.paper", textDecoration: "none", "&:hover": { color: 'secondary.main' } }}
-                            >
-                                Blog
-                            </Typography>
-                            <Typography
-                                component={Link}
-                                href="#"
-                                sx={{ color: "background.paper", textDecoration: "none", "&:hover": { color: 'secondary.main' } }}
-                            >
-                                Carreiras
-                            </Typography>
+                            
                         </Box>
                     </Grid>
 

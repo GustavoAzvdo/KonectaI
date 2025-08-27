@@ -35,7 +35,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position='sticky' sx={{ bgcolor: (theme) => alpha(theme.palette.background.default, 0.9), py: 1 }} elevation={3}>
+    <AppBar position='fixed' sx={{ bgcolor: (theme) => alpha(theme.palette.background.default, 0.9), py: 1 }} elevation={3}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
