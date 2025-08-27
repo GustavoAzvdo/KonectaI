@@ -6,7 +6,7 @@
         return (
             <Box
                 sx={{
-                    height: '89dvh',
+                    height: '100dvh',
                     background: "linear-gradient(135deg, #6c15d5 0%, #FF8e38 100%)",
                     position: "relative", // para os elementos dentro se posicionare
                     overflow: 'hidden'
