@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-
+import { alpha } from "@mui/material/styles";
 import Button from '@mui/material/Button';
 
 import MenuItem from '@mui/material/MenuItem';
@@ -35,7 +35,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={{ bgcolor: 'background.paper', py: 1 }} elevation={3}>
+    <AppBar position='sticky' sx={{ bgcolor: (theme) => alpha(theme.palette.background.default, 0.9), py: 1 }} elevation={3}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
