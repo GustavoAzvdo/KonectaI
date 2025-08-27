@@ -105,20 +105,21 @@ function ResponsiveAppBar() {
                   color: "black",
                   display: "block",
                   fontSize: "16px",
-                  borderColor: "transparent",
-                  backgroundImage: "linear-gradient(90deg, #6C15D590, #FF8E3890)",
-                  backgroundSize: "0% 100%", // começa vazio
+                  border: "none",
+                  borderRadius: 0,
+                  backgroundImage: "linear-gradient(90deg, #6B4EFF 0%, #FF8A3D 100%)",
+                  backgroundSize: "0% 2px", // começa invisível
                   backgroundRepeat: "no-repeat",
-                  backgroundPosition: "left",
-                  transition: "background-size 0.4s ease, color 0.4s ease",
+                  backgroundPosition: "bottom left", // só na borda inferior
+                  transition: "background-size 0.4s ease",
                   "&:hover": {
-                    backgroundSize: "100% 100%", // cresce até preencher
-                    color: "black",
+                    backgroundSize: "100% 2px", // preenche da esquerda pra direita
                   },
                 }}
               >
                 {page}
               </Button>
+
 
             ))}
           </Box>
