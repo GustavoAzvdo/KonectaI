@@ -11,7 +11,7 @@ import Typography from '@mui/material/Typography';
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-import { Box, Grid, Stack } from '@mui/material';
+import { Box, Grid, List, ListItem, Stack } from '@mui/material';
 import TravelExploreRoundedIcon from '@mui/icons-material/TravelExploreRounded';
 import VisibilityRoundedIcon from '@mui/icons-material/Visibility';
 import Diversity1RoundedIcon from '@mui/icons-material/Diversity1Rounded';
@@ -48,9 +48,17 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 }));
 
 const mvvs = [
-    { nome: 'Missão', foto: missao, icone: <TravelExploreRoundedIcon fontSize='large' sx={{ color: 'white' }} />, pergunta: ' Qual é a nossa missão?', msg: '  Dar voz à juventude, transformando suas ideias e necessidades em soluções tecnológicas inovadoras que gerem impacto real na comunidade.' },
-    { nome: 'Visão', foto: visao, icone: <VisibilityRoundedIcon fontSize='large' sx={{ color: 'white' }} />, pergunta: ' Qual é a nossa visão?', msg: '  Ser referência como empresa que tem como público alvo jovens,cria, conecta e inova, mostrando que a tecnologia pode nascer da escuta ativa e se transformar em mudança social positiva.' },
-    { nome: 'Valores', foto: valores, icone: <Diversity1RoundedIcon fontSize='large' sx={{ color: 'white' }} />, pergunta: ' Quais são nossos valores?', msg: ' Acreditamos na escuta ativa, pois é ouvindo que encontramos os verdadeiros problemas a resolver. Defendemos a inovação guiada pela comunidade jovem, criando soluções que fazem sentido para quem as utiliza. Valorizamos a colaboração, transformando ideias coletivas em projetos concretos. Praticamos a inclusão e diversidade, reconhecendo que cada voz importa.E buscamos sempre o impacto social, colocando a tecnologia a serviço das pessoas e não o contrário.' }
+    { nome: 'Missão', foto: missao, icone: <TravelExploreRoundedIcon fontSize='large' sx={{ color: 'white' }} />, pergunta: ' Qual é a nossa missão?', msg: ['Dar voz à juventude, transformando suas ideias e necessidades em soluções tecnológicas inovadoras que gerem impacto real na comunidade.'] },
+    { nome: 'Visão', foto: visao, icone: <VisibilityRoundedIcon fontSize='large' sx={{ color: 'white' }} />, pergunta: ' Qual é a nossa visão?', msg: ['Ser referência como empresa que tem como público alvo jovens, cria, conecta e inova, mostrando que a tecnologia pode nascer da escuta ativa e se transformar em mudança social positiva.'] },
+    {
+        nome: 'Valores', foto: valores, icone: <Diversity1RoundedIcon fontSize='large' sx={{ color: 'white' }} />, pergunta: ' Quais são nossos valores?', msg: [
+            'Escuta ativa para identificar problemas reais.',
+            'Inovação guiada pelos jovens.',
+            'Colaboração que vira ação.',
+            'Inclusão e diversidade como força.',
+            'Impacto social acima de tudo.'
+        ]
+    }
 ]
 
 export default function RecipeReviewCard() {
@@ -67,7 +75,10 @@ export default function RecipeReviewCard() {
                 <Grid size={{ xs: 12, sm: 12, md: 4 }} key={key} sx={{ py: 3 }}>
 
                     <Card
+                    
+                        onClick={() => handleExpandClick(key)}
                         sx={{
+                            cursor: 'pointer',
                             width: '100%',
                             bgcolor: 'background.default',
                             border: '1px solid #e5e5e5ff',
@@ -128,7 +139,28 @@ export default function RecipeReviewCard() {
                         <Collapse in={expanded === key} timeout="auto" unmountOnExit>
                             <CardContent sx={{ textAlign: 'justify' }}>
                                 <Typography variant='body2' color='text.secondary' fontSize={18}>
-                                    {mvv.msg}
+                                    {Array.isArray(mvv.msg) && mvv.msg.length > 1 ? (
+                                        <List sx={{ pl: 2, py: 0 }}>
+                                            {mvv.msg.map((item, idx) => (
+                                                <ListItem
+                                                    key={idx}
+                                                    sx={{
+                                                        display: 'list-item',
+                                                        pl: 0,
+                                                        py: 0.5,
+                                                        listStyleType: 'disc',
+                                                        color: 'text.secondary',
+                                                        fontSize: 18,
+                                                    }}
+                                                    disablePadding
+                                                >
+                                                    {item}
+                                                </ListItem>
+                                            ))}
+                                        </List>
+                                    ) : (
+                                        Array.isArray(mvv.msg) ? mvv.msg[0] : mvv.msg
+                                    )}
                                 </Typography>
                             </CardContent>
                             <Box sx={{ width: '100%', height: '200px', pt: 1 }}>
