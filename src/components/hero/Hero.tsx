@@ -115,6 +115,7 @@ const Hero = () => {
 
                         <Button
                             variant="outlined"
+                            
                             size="large"
                             sx={{
                                 fontSize: { xs: 16, sm: 18, md: 18 }, // xs = celular, sm = tablet, md = desktop
@@ -124,6 +125,7 @@ const Hero = () => {
                                 '&:hover': { color: 'primary.main', bgcolor: 'background.paper' },
                                 px: { sm: 3, md: 4 }, // padding horizontal
                                 py: { sm: 1.5, md: 2 }, // padding vertical
+                                
                             }}
                         >
                             Entre em contato
