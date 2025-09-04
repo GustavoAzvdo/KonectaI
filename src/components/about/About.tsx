@@ -13,7 +13,7 @@ const motivacoes = [
 
 export default function AboutSection() {
     return (
-        <Box id="sobre" sx={{ py: 10, backgroundColor: "background.default" }}>
+        <Box id="inicio" sx={{ scrollMarginTop: '88px',py: 10, backgroundColor: "background.default" }}>
             <Container maxWidth="lg">
                 <Box sx={{ maxWidth: "4xl", mx: "auto", textAlign: "center" }}>
                     <Typography

@@ -14,9 +14,13 @@ import MenuItem from '@mui/material/MenuItem';
 
 import logoRemoveBg from '../../assets/logoRemoveBg.png'
 
-const pages = ['Início', 'Sobre', 'Projetos', 'Contato'];
-const settings = ['Início', 'Sobre', 'Projetos', 'Contato'];
+const pages = ['Início', 'Pilares'];
+const settings = ['Início', 'Pilares'];
 
+const sectionIds: Record<string, string> = {
+  Início: "inicio",
+  Pilares: "pilares"
+};
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
@@ -86,7 +90,11 @@ function ResponsiveAppBar() {
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu} >
+                <MenuItem key={page} onClick={() => {
+                  handleCloseNavMenu(); // fecha o menu
+                  const section = document.getElementById(sectionIds[page]);
+                  section?.scrollIntoView({ behavior: "smooth" });
+                }} >
                   <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
                 </MenuItem>
               ))}
@@ -98,7 +106,11 @@ function ResponsiveAppBar() {
               <Button
                 variant="text"
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => {
+                  handleCloseNavMenu(); // fecha o menu
+                  const section = document.getElementById(sectionIds[page]);
+                  section?.scrollIntoView({ behavior: "smooth" });
+                }}
                 sx={{
                   px: 3,
                   my: 2,

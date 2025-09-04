@@ -3,7 +3,7 @@ import CardMVV from '../card/CardMVV'
 
 const Mvv = () => {
     return (
-        <Box>
+        <Box id='pilares' sx={{scrollMarginTop: '150px'}}>
             <Container>
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Typography
