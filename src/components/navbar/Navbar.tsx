@@ -7,6 +7,9 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
+import GroupsIcon from '@mui/icons-material/Groups';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import { alpha } from "@mui/material/styles";
 import Button from '@mui/material/Button';
 
@@ -14,12 +17,19 @@ import MenuItem from '@mui/material/MenuItem';
 
 import logoRemoveBg from '../../assets/logoRemoveBg.png'
 
-const pages = ['Início', 'Pilares'];
-const settings = ['Início', 'Pilares'];
+const pages = ['Sobre nós', 'Projetos', 'Pilares'];
+const settings = ['Sobre nós', 'Projetos', 'Pilares'];
 
 const sectionIds: Record<string, string> = {
-  Início: "inicio",
+  'Sobre nós': "sobre",
+  Projetos: 'projetos',
   Pilares: "pilares"
+};
+
+const pageIcons: Record<string, React.JSX.Element> = {
+  'Sobre nós': <GroupsIcon fontSize='small'/>, // mr = margin-right
+  Projetos: <AccountTreeIcon fontSize='small'/>,
+  Pilares: <AssignmentIcon fontSize='small'/>,
 };
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -128,8 +138,13 @@ function ResponsiveAppBar() {
                     backgroundSize: "100% 2px", // preenche da esquerda pra direita
                   },
                 }}
+
               >
-                {page}
+                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 2 }}>
+
+                  {page}
+                  {pageIcons[page]}
+                </Box>
               </Button>
 
 

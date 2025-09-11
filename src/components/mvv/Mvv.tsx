@@ -5,7 +5,7 @@ const Mvv = () => {
     return (
         <Box id='pilares' sx={{scrollMarginTop: '150px'}}>
             <Container>
-                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' , pt: 5}}>
                     <Typography
                         variant="h2"
                         sx={{

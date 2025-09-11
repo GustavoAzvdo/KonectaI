@@ -7,9 +7,9 @@ import FacebookIcon from "@mui/icons-material/Facebook"
 import logoRemoveBg from '../../assets/logoRemoveBg.png'
 export default function Footer() {
     return (
-        <Box component="footer" sx={{ backgroundColor: "text.primary", color: "white", py: 6, mt: 2 }}>
+        <Box component="footer" sx={{ backgroundColor: "text.primary", color: "white", py: 6, mt: 10}}>
             <Container maxWidth="lg">
-                <Grid container spacing={4}>
+                <Grid container spacing={4} sx={{display: 'flex', justifyContent: 'space-between'}}>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 2 }}>
                             <Box sx={{ width: '50px', height: '50px' }}>
@@ -56,52 +56,6 @@ export default function Footer() {
                             >
                                 <LinkedInIcon />
                             </IconButton>
-                        </Box>
-                    </Grid>
-
-                    <Grid size={{ xs: 12, md: 3 }}>
-                        <Typography
-                            variant="h6"
-                            sx={{
-                                fontWeight: 600,
-                                mb: 2,
-                                position: "relative",
-                                display: "inline-block",
-                                cursor: 'default',
-                                "&::after": {
-                                    content: '""',
-                                    position: "absolute",
-                                    left: 0,
-                                    bottom: -2,
-                                    width: 0,
-                                    height: "3px",
-                                    background: "linear-gradient(90deg, #7c3aed, #f97316)",
-                                    transition: "width 0.4s ease",
-                                    borderRadius: "2px",
-                                },
-                                "&:hover::after": {
-                                    width: "100%",
-                                },
-                            }}
-                        >
-                            Links Úteis
-                        </Typography>
-                        <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-                            <Typography
-                                component={Link}
-                                href="#sobre"
-                                sx={{ color: "background.paper", textDecoration: "none", "&:hover": { color: 'secondary.main' } }}
-                            >
-                                Sobre Nós
-                            </Typography>
-                            <Typography
-                                component={Link}
-                                href="#projetos"
-                                sx={{ color: "background.paper", textDecoration: "none", "&:hover": { color: 'secondary.main' } }}
-                            >
-                                Projetos
-                            </Typography>
-                            
                         </Box>
                     </Grid>
 

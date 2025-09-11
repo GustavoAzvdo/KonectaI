@@ -6,7 +6,7 @@ const Hero = () => {
     return (
         <Box
             sx={{
-                
+
                 height: '100dvh',
                 background: "linear-gradient(135deg, #6c15d5 0%, #FF8e38 100%)",
                 position: "relative", // para os elementos dentro se posicionare
@@ -41,7 +41,7 @@ const Hero = () => {
                 >
                     <Typography variant="h1" sx={{
                         pt: 5,
-                        mb: 2, 
+                        mb: 2,
                         fontSize: {
                             xs: "35px", // celular
                             sm: "40px", // tablets pequenos
@@ -49,7 +49,7 @@ const Hero = () => {
                             lg: "56px", // telas grandes
                         },
                     }}>
-                        Conectando Jovens &
+                        Conectando Pessoas &
                     </Typography>
                     <Stack
                         sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 3 }}
@@ -108,14 +108,14 @@ const Hero = () => {
                             lineHeight: 1.6,
                             textAlign: { xs: "center", md: "center" }, // opcional: centraliza no mobile
                         }}>
-                           Damos voz à juventude para criar tecnologia que gera mudanças reais.
+                            Damos voz à juventude para criar tecnologia que gera mudanças reais.
                         </Typography>
                     </Container>
-                    <Stack  direction= {{xs: 'column', sm: 'row', md: 'row'}} spacing={3} sx={{ mt: 5, zIndex: 10, px: 1 }}>
+                    <Stack direction={{ xs: 'column', sm: 'row', md: 'row' }} spacing={3} sx={{ mt: 5, zIndex: 10, px: 1 }}>
 
-                        <Button
+                        {/* <Button
                             variant="outlined"
-                            
+
                             size="large"
                             sx={{
                                 fontSize: { xs: 16, sm: 18, md: 18 }, // xs = celular, sm = tablet, md = desktop
@@ -125,12 +125,16 @@ const Hero = () => {
                                 '&:hover': { color: 'primary.main', bgcolor: 'background.paper' },
                                 px: { sm: 3, md: 4 }, // padding horizontal
                                 py: { sm: 1.5, md: 2 }, // padding vertical
-                                
+
                             }}
                         >
                             Entre em contato
-                        </Button>
+                        </Button> */}
                         <Button
+                            onClick={() => {
+                                const section = document.getElementById('projetos');
+                                section?.scrollIntoView({ behavior: 'smooth' });
+                            }}
                             variant="contained"
                             size="large"
                             sx={{
