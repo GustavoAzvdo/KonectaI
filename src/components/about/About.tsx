@@ -37,7 +37,7 @@ export default function AboutSection() {
                         </Typography>
                         <Grid container spacing={10} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <Grid size={{ xs: 12, sm: 12, md: 8 }}>
-                                <Typography variant="h5" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', fontWeight: '600' }}>
+                                <Typography variant="h5" sx={{ display: 'flex', alignItems: 'center', justifyContent: {xs: 'center', sm: 'center', md: 'flex-start'}, fontWeight: '600' }}>
                                     Conexão
                                 </Typography>
                                 <Typography sx={{ fontSize: '20px', color: 'text.secondary', textAlign: 'justify', pt: 2 }}>
@@ -63,7 +63,7 @@ export default function AboutSection() {
                                 />
                             </Grid>
                             <Grid size={{ xs: 12, sm: 12, md: 8 }}>
-                                <Typography variant="h5" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', fontWeight: '600' }}>
+                                <Typography variant="h5" sx={{ display: 'flex', alignItems: 'center', justifyContent: {xs: 'center', sm: 'center', md: 'flex-start'}, fontWeight: '600' }}>
                                     Empoderamento
                                 </Typography>
                                 <Typography sx={{ pt: 2, fontSize: '20px', color: 'text.secondary', textAlign: 'justify' }}>
@@ -73,7 +73,7 @@ export default function AboutSection() {
                                 </Typography>
                             </Grid>
                             <Grid size={{ xs: 12, sm: 12, md: 8 }}>
-                                <Typography variant="h5" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', fontWeight: '600' }}>
+                                <Typography variant="h5" sx={{ display: 'flex', alignItems: 'center', justifyContent: {xs: 'center', sm: 'center', md: 'flex-start'}, fontWeight: '600' }}>
                                     Inovação
                                 </Typography>
                                 <Typography sx={{ pt: 2,fontSize: '20px', color: 'text.secondary', textAlign: 'justify' }}>
