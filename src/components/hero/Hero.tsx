@@ -1,6 +1,7 @@
 import { Box, Button, Container, Stack, Typography } from '@mui/material'
 import Squares from '../../../ReactBits/Squares/Squares'
 import RotatingText from '../../../ReactBits/RotatingText/RotatingText'
+import AddTaskIcon from '@mui/icons-material/AddTask';
 const Hero = () => {
 
     return (
@@ -141,9 +142,10 @@ const Hero = () => {
                                 fontSize: { xs: 16, sm: 16, md: 18 }, // ajusta o tamanho da fonte conforme a tela
                                 bgcolor: 'background.paper',
                                 color: 'primary.main',
-                                px: { sm: 3, md: 4 }, // padding horizontal responsivo
-                                py: { sm: 1.5, md: 2 }, // padding vertical responsivo
+                                px: { sm: 3.1, md: 4 }, // padding horizontal responsivo
+                                py: { sm: 1.6, md: 2 }, // padding vertical responsivo
                             }}
+                            endIcon={<AddTaskIcon sx={{color: 'primary.main', display: 'flex', alignItems: 'center', justifyContent:' center'}} />}
                         >
                             Conheça nossos projetos
                         </Button>
